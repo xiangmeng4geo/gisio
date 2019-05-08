@@ -53,3 +53,5 @@ __all__ = [
     'box', 'shape', 'Point', 'Polyline', 'Polygon', 'MultiPoint', 'MultiPolyline', 'MultiPolygon',
     'GeometryCollection', 'mapping', 'LinearRing', 'CAP_STYLE', 'JOIN_STYLE',
 ]
+
+

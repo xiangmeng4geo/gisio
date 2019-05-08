@@ -48,4 +48,4 @@ class MultiPolygon(ShpMultiPolygon):
           >>> type(ob.geoms[0]) == Polygon
           True
         """
-        MultiPolygon.__init__(self, polygons, context_type)
+        ShpMultiPolygon.__init__(self, polygons, context_type)

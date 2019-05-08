@@ -10,6 +10,8 @@ description:
 
 from shapely.geometry.polygon import LinearRing as ShpLinearRing, Polygon as ShpPolygon
 
+__all__ = ['LinearRing', 'Polygon']
+
 
 class LinearRing(ShpLinearRing):
     def __init__(self, coordinates):
@@ -52,4 +54,22 @@ class Polygon(ShpPolygon):
     """
 
     def __init__(self, shell=None, holes=None):
+        """
+        Parameters
+        ----------
+        shell : sequence
+            A sequence of (x, y [,z]) numeric coordinate pairs or triples
+        holes : sequence
+            A sequence of objects which satisfy the same requirements as the
+            shell parameters above
+
+        Example
+        -------
+        Create a square polygon with no holes
+
+          >>> coords = ((0., 0.), (0., 1.), (1., 1.), (1., 0.), (0., 0.))
+          >>> polygon = Polygon(coords)
+          >>> polygon.area
+          1.0
+        """
         ShpPolygon.__init__(self, shell, holes)
